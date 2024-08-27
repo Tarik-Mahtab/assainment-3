@@ -1,46 +1,236 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind CSS</title>
-
-    <!-- Google font cdn -->
+     
+    <!-- Google Font cdn -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
-    <!-- Font awesom cdn -->
-    <script src="https://kit.fontawesome.com/872c057ab4.js" crossorigin="anonymous"></script>
+        <!-- Fontawesome cdn -->
+        <script
+        src="https://kit.fontawesome.com/bbfc4be646.js"
+        crossorigin="anonymous"
+       ></script>
 
-    <!-- tailwind css cdn -->
+     <!-- Daisyui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <script>
+    <style>
+        .font-manrope{
+            font-family: "Manrope", sans-serif;
+        }
+
+    </style>
+     
+     <script>
         tailwind.config = {
           theme: {
             extend: {
               colors: {
                 clifford: '#da373d',
+                'house-primary': 'rgb(171, 239, 95)',
+                'h-primary': 'rgb(33, 33, 33)'
               }
             }
           }
         }
       </script>
 
+
 </head>
 
-<body>
+<body class="font-manrope">
     
-    <header>
+    <!-- <header class="max-w-screen-xl mx-auto px-16 lg:px-28">
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor">
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                      </div>
+                      <ul
+                        tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li><a>Home</a></li>
+                        <li><a>Services</a></li>
+                        <li><a>Portfolio</a></li>
+                        <li><a>Blogs</a></li>
+                        <li><a>Contact Us</a></li>
+                      </ul>
+                    </div>
+                    <a class="btn btn-ghost text-xl font-bold"> <i class="fa-solid fa-arrow-right bg-house-primary rounded-full -rotate-45 text-lg p-1"></i> Rinterio</a>
+                  </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                    <li><a>Home</a></li>
+                    <li><a>Services</a></li>
+                    <li><a>Portfolio</a></li>
+                    <li><a>Blogs</a></li>
+                    <li><a>Contact Us</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end ">
+                    <i class="fa-solid fa-magnifying-glass px-2"></i>
+                    <i class="fa-solid fa-cart-shopping px-2"></i>
+                  <a class="btn bg-house-primary rounded-full font-bold">Book Consult <i class="fa-solid fa-arrow-right bg-black rounded-full -rotate-45 p-1"></i></a>
+                </div>
+                
+              </div>
+        </nav>
+    </header> -->
 
-    </header>
 
+    <main class="max-w-screen-xl mx-auto px-8 items-center lg:px-28">
+         
+        <section class="banner">
+            <div class=" my-36 flex flex-col mx-auto text-center">
+                <div class="mx-auto">
+                    <img  src="./images/banner.png" alt="">
+                </div>
+                <h1 class="text-4xl text-h-primary font-extrabold py-5">
+                    A barn house of this design has a striking appearance
+                </h1>
+                <div>
+                    <p class="pb-5">
+                        The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents, and large windows that flood the space with natural light.
+                    </p>
+                </div>
+                <div>
+                    <button class="btn bg-house-primary rounded-full font-bold text-xl text-h-primary">View Details <i class="fa-solid fa-arrow-right bg-house-primary rounded-full -rotate-45 text-lg p-1"></i></button>
+                </div>
+    
+            </div>
+        </section>
 
-    <main>
+        <section class="desing">
+            <div class=" md:flex md:justify-evenly gap-5 pt-25">
+                <div class="relative">
+                    <div>
+                        <button class="py-3 "> <i class="fa-solid fa-arrow-right"></i> About Us</button>
+                        <h1 class=" font-bold text-4xl text-h-primary py-5">We design thoughtful, liveable spaces</h1>
+                        <p class="py-3">The barn house captivates with its blend of rustic charm and 
+                            modern sophistication, featuring weathered wood, sleek metal accents.</p>
+                            <div>
+                                <div class="flex mt-10"> 
+                                  <div>
+                                    <img src="./images/commercial.png" alt="">
+                                  </div>
+                                  <div class="mx-5 ">
+                                    <h1>Commercial</h1>
+                                    <p>The barn house captivates with its blend of rustic charm and modern.</p>
+                                   </div>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="flex mt-10"> 
+                                  <div>
+                                    <img src="./images/residential.png" alt="">
+                                  </div>
+                                  <div class=" mx-5 ">
+                                    <h1>Residential</h1>
+                                    <p>The barn house captivates with its blend of rustic charm and modern.</p>
+                                   </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="absolute -top-12 -left-10">
+                        <img class="max-sm:hidden " src="./images/Vector.png" alt="">
+                    </div>
+
+                </div>
+                <div class="w-full">
+                    <img src="./images/Rectangle.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="works my-28">
+            <div class="text-center py-7">
+                <button class="font-medium"> <i class="fa-solid fa-arrow-right"></i> How we works</button>
+                <h1 class=" text-3xl font-extrabold text-h-primary py-5 ">Our Works Process</h1>
+                <p class="font-medium pb-5">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-5">
+                <div class="bg-pink-200 p-6 rounded-2xl">
+                    <img src="./images/concept.png" alt="">
+                    <h1 class="font-bold text-h-primary text-xl">Concept</h1>
+                    <p>The barn house captivates with its blend of rustic charm and modern.</p>
+
+                </div>
+                <div class="bg-amber-300 p-6 rounded-2xl">
+                    <img src="./images/flow-chart.png" alt="">
+                    <h1 class="font-bold text-h-primary text-xl">Design Process</h1>
+                    <p>The barn house captivates with its blend of rustic charm and modern.</p>
+
+                </div>
+                <div class="bg-emerald-300 p-6 rounded-2xl">
+                    <img src="./images/vision.png" alt="">
+                    <h1 class="font-bold text-h-primary text-xl">Supervision</h1>
+                    <p>The barn house captivates with its blend of rustic charm and modern.</p>
+
+                </div>
+                <div class="bg-blue-500 p-6 rounded-2xl">
+                    <img src="./images/budget-planning.png" alt="">
+                    <h1 class="font-bold text-h-primary text-xl">Budget Planning</h1>
+                    <p>The barn house captivates with its blend of rustic charm and modern.</p>
+
+                </div>
+            </div>
+        </section>
 
     </main>
 
+    <section class="bg-cover bg-center bg-[url('./images/bg.jpg')]">
+        
+        <div class="max-w-screen-xl mx-auto px-8 items-center lg:px-28">
+            <div class="text-center pt-24 pb-10">
+                <button class="btn bg-lime-200 rounded-full font-bold"><i class="fa-solid fa-arrow-right"></i> Let’s Connect</button>
+                <h1 class="font-extrabold text-4xl text-h-primary py-5">Let’s Discuss Next Project</h1>
+                <p class="font-semibold">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-7 ">
+                <div>
+                    <input class="w-full" type="text" name="" placeholder="First Name*" id="" >
+                </div>
+                <div>
+                    <input class="w-full" type="text" placeholder="Last Name*" name="" id="">
+                </div>
+                <div>
+                    <input class="w-full" type="number" placeholder="Phone Number*">
+                </div>
+                <div >
+                    <input class="w-full" type="email"
+                    placeholder="Email Number*" name="" id="">
+                </div class="row-span-2">
+            </div>
+            <div class="mt-7 mb-10">
+                <textarea class="w-full" name=""
+                rows="7" cols="50"
+                placeholder="Write your message here" cols="20" id=""></textarea>
+            </div>
+            <div class="pb-16">
+                <button class="bg-house-primary w-full rounded-full text-center pt-2 pb-2">Send Mail <i class="fa-solid fa-arrow-right bg-black text-white rounded-full -rotate-45 "></i></button>
+            </div>
+        </div>
+
+    </section>
 
     <footer>
 
